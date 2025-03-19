@@ -15,7 +15,6 @@
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
       rel="stylesheet"
     />
-    <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
     <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
@@ -23,10 +22,8 @@
       <!-- navigation section -->
       <nav class="navigation">
         <div class="navigation__container container">
-          <svg class="navigation__svg" width="120" height="45">
-            <use href="/svg/sprite.svg#icon-logo"></use>
-          </svg>
-          <ul class="navigation__list">
+          <img class="navigation__svg"  src="./img/logo.png" alt="logotype">
+          <ul class="navigation__list" id="js-navigation">
             <li class="navigation__list-el">
               <a href="#" class="navigation__list-link">Tariffs</a>
             </li>
@@ -45,7 +42,7 @@
             <li class="navigation__list-el">
               <a
                 href="https://github.com/"
-                class="navigation__list-btn"
+                class="button button--small"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -53,13 +50,18 @@
               </a>
             </li>
           </ul>
+          <button class="burger" id="js-burger">
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
+            <span class="burger__bar"></span>
+          </button>
         </div>
       </nav>
     </header>
     <main>
       <!-- hero section -->
       <section class="hero container">
-        <div>
+        <div class="hero__content">
           <div class="hero__title-container">
             <h1 class="hero__title">
               Set Up Accepting Payments in Multiple Cryptocurrencies With No
@@ -73,11 +75,13 @@
           </div>
 
           <div class="hero__btn-container">
-            <a href="#" class="hero__btn hero__btn-started">Get Started</a>
-            <a href="#" class="hero__btn hero__btn-instruction">How It Works</a>
+            <a href="#" class="button">Get Started</a>
+            <a href="#" class="button button--outline">How It Works</a>
           </div>
         </div>
-        <img src="./img/hero-img.png" alt="" class="hero__hero-img" />
+        <div class="hero__hero-img">
+          <img src="./img/hero-img.png" alt="" />
+        </div>
       </section>
 
       <!-- advantages section -->
@@ -127,7 +131,7 @@
 
       <!-- usage section -->
       <section class="usage container">
-        <h2 class="usage__title">How to Use SHKeeper?</h2>
+        <h2 class="main-title">How to Use SHKeeper?</h2>
         <p class="usage__text">
           SHKeeper equips you with extra efficiency in integrating crypto
           payment service with any other existing systems.
@@ -206,7 +210,7 @@
 
       <!-- tariff section -->
       <section class="tariff container">
-        <h2 class="tariff__section-title">Tariff Plans</h2>
+        <h2 class="main-title tariff__title">Tariff Plans</h2>
         <ul class="tariff__list">
           <li class="tariff__list-el">
             <img src="./img/tarrif-1.png" alt="" class="tarrif__list-el-img" />
@@ -284,7 +288,7 @@
           <li class="tariff__list-el">
             <img src="./img/tarrif-3.png" alt="" class="tarrif__list-el-img" />
             <p class="tariff__subtitle">Custom Solution</p>
-            <p class="tariff__price">Pricing on request</p>
+            <p class="tariff__price tariff__price--small">Pricing on request</p>
             <ul class="tariff__list-tariff">
               <li class="tariff__list-tariff-el">
                 <p class="tariff__list-tariff-el-text">
@@ -319,7 +323,7 @@
 
       <!-- about section -->
       <section class="about container">
-        <h3 class="about__title">About SHKeeper</h3>
+        <h3 class="main-title about__title">About SHKeeper</h3>
 
         <div class="about__container">
           <img src="./img/about-1.png" alt="" class="about__img" />
@@ -339,7 +343,7 @@
               If you need help with integration, write to us. We will be happy
               to help you! We can also write a custom solution for you.
             </p>
-            <button class="about__btn" aria-label="Explore Virtual Systems">
+            <button class="button" aria-label="Explore Virtual Systems">
               Explore Virtual Systems
             </button>
           </div>
@@ -347,59 +351,55 @@
       </section>
 
       <!-- road-map section -->
-      <section class="road-map container">
-        <h3 class="road-map__title">Road Map</h3>
-        <ul class="road-map__list-1">
-          <li class="road-map__list-el-1">
-            <div class="road-map__list-el-container">
-              <h4 class="road-map__list-el-title">
+      <section class="road-map-block container">
+        <h3 class="main-title road-map-block__title">Road Map</h3>
+
+        <ul class="road-map">
+          <li class="road-map__el">
+            <div class="road-map__container road-map__container--one">
+              <h4 class="road-map__title">
                 <time datetime="2022-01">January 2022</time>
               </h4>
-              <p class="road-map__list-el-text">
+              <p class="road-map__text">
                 SHKeeper's release for Virtual Systems. Installation and
                 customization for our goals.
               </p>
             </div>
           </li>
-          <li class="road-map__list-el-1">
-            <div class="road-map__list-el-container">
-              <h4 class="road-map__list-el-title">
+          <li class="road-map__el road-map__el--small">
+            <div class="road-map__container road-map__container--two">
+              <h4 class="road-map__title">
                 <time datetime="2022-07">July 2022</time>
               </h4>
-              <p class="road-map__list-el-text">
+              <p class="road-map__text">
                 Possibility to create invoices on a web version.
               </p>
             </div>
           </li>
-          <li class="road-map__list-el-1">
-            <div class="road-map__list-el-container">
-              <h4 class="road-map__list-el-title">
+          <li class="road-map__el">
+            <div class="road-map__container road-map__container--three">
+              <h4 class="road-map__title">
                 <time datetime="2022-11">November 2022</time>
               </h4>
-              <p class="road-map__list-el-text">
-                Adding the ability to import a key.
-              </p>
+              <p class="road-map__text">Adding the ability to import a key.</p>
             </div>
           </li>
-        </ul>
-
-        <ul class="road-map__list-2">
-          <li class="road-map__list-el-2">
-            <div class="road-map__list-el-container">
-              <h4 class="road-map__list-el-title">
+          <li class="road-map__el road-map__el--small">
+            <div class="road-map__container road-map__container--four">
+              <h4 class="road-map__title">
                 <time datetime="2022-05">May 2022</time>
               </h4>
-              <p class="road-map__list-el-text">
+              <p class="road-map__text">
                 Advance improvement and release in open-source.
               </p>
             </div>
           </li>
-          <li class="road-map__list-el-2">
-            <div class="road-map__list-el-container">
-              <h4 class="road-map__list-el-title">
+          <li class="road-map__el">
+            <div class="road-map__container road-map__container--five">
+              <h4 class="road-map__title">
                 <time datetime="2022-09">September 2022</time>
               </h4>
-              <p class="road-map__list-el-text">
+              <p class="road-map__text">
                 USDT will be added for two networks (TRC-20 and ERC-20).
               </p>
             </div>
@@ -409,20 +409,26 @@
 
       <!-- faq section -->
       <section class="faq container">
-        <h3 class="faq__title">FAQ</h3>
+        <h3 class="main-title faq__title">FAQ</h3>
         <ul class="faq__list">
           <li class="faq__list-el">
             <div class="faq__list-el-title-container">
               <h4 class="faq__list-el-subtitle">What is SHKeeper?</h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+                <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
 
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -433,14 +439,20 @@
           <li class="faq__list-el">
             <div class="faq__list-el-title-container">
               <h4 class="faq__list-el-subtitle">Who Can Use SHKeeper?</h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -451,14 +463,20 @@
           <li class="faq__list-el">
             <div class="faq__list-el-title-container">
               <h4 class="faq__list-el-subtitle">How to Install SHKeeper?</h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -471,14 +489,20 @@
               <h4 class="faq__list-el-subtitle">
                 Do I Need to Have an Online Store to Use SHKeeper?
               </h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -491,14 +515,20 @@
               <h4 class="faq__list-el-subtitle">
                 How Does SHKeeper Create a New Address for Each Invoice?
               </h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -511,14 +541,20 @@
               <h4 class="faq__list-el-subtitle">
                 What if I have a problem paying an invoice?
               </h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -531,14 +567,20 @@
               <h4 class="faq__list-el-subtitle">
                 How Much Does It Cost to Run the SHKeeper?
               </h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -552,14 +594,20 @@
                 What are the Minimal Requirements to Server Configuration for
                 SHKeeper?
               </h4>
-              <svg class="faq__open-acordeon-svg-plus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-plus"></use>
-              </svg>
-              <svg class="faq__open-acordeon-svg-minus" width="12" height="12">
-                <use href="./svg/sprite.svg#icon-minus"></use>
-              </svg>
+              <button class="faq__toggle-btn js-faq-toggle">
+             <img
+                  class="faq__open-acordeon-svg-plus"
+                  src="./img/plus.png"
+                  alt="open acordeon"
+                />
+                <img
+                  class="faq__open-acordeon-svg-minus"
+                  src="./img/minus.png"
+                  alt="close acordeon"
+                />
+              </button>
             </div>
-            <p class="faq__list-el-text">
+            <p class="faq__list-el-text js-faq-content">
               SHKeeper is a multifunctional software with many variations of
               exploitation that can solve problems for different types of users.
               The processor can be useful for eCommerce project owners, content
@@ -578,96 +626,114 @@
             Leave us a message & we will reply shortly.
             <br />Support available <br />24/7/365
           </p>
-          <button class="question__btn">Contact Us</button>
+          <form id="feedback-form" class="form">
+            <label for="name" class="form-label">Name:</label>
+            <input type="text" id="name" name="name" class="input" />
+            <div class="error" id="name-error"></div>
+
+            <label for="email" class="form-label">Email:</label>
+            <input type="email" id="email" name="email" class="input" />
+            <div class="error" id="email-error"></div>
+
+            <label for="message" class="form-label">Message:</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form-textarea"
+              rows="5"
+            ></textarea>
+            <div class="error" id="message-error"></div>
+
+            <button class="button" type="submit">Contact Us</button>
+          </form>
           <img src="./img/question-1.png" alt="" class="question__img" />
-          <img src="./img/question-1.png" alt="" class="question__img-1" />
           <img src="./img/question-4.png" alt="" class="question__img-4" />
         </div>
       </section>
     </main>
 
     <!-- footer section -->
-    <footer>
-      <section class="footer container">
-        <div class="footer__logo-container">
-          <svg class="navigation__svg" width="120" height="45">
-            <use href="/svg/sprite.svg#icon-logo"></use>
-          </svg>
-          <p class="footer__logo-text">
-            SHKeeper - open-source cryptocurrency payment processor with
-            multiply cryptocurrencies available. It will take your E-commerce to
-            a new level.
-          </p>
-        </div>
-        <div class="footer__software-container">
-          <h3 class="footer__software-title">SOFTWARE</h3>
-          <ul class="footer__software-list">
-            <li class="footer__software-list-el">
-              <a href="" class="footer__software-list-link">How to Use</a>
-            </li>
-            <li class="footer__software-list-el">
-              <a href="" class="footer__software-list-link">Tariff Plans</a>
-            </li>
-            <li class="footer__software-list-el">
-              <a href="" class="footer__software-list-link">Features</a>
-            </li>
-            <li class="footer__software-list-el">
-              <a href="" class="footer__software-list-link">Integrations</a>
-            </li>
-          </ul>
-        </div>
+    <footer class="footer">
+      <section class="container">
+        <div class="footer__body">
+          <div class="footer__logo-container">
+            <img class="navigation__svg"  src="./img/logo.png" alt="logotype">
+            <p class="footer__logo-text">
+              SHKeeper - open-source cryptocurrency payment processor with
+              multiply cryptocurrencies available. It will take your E-commerce
+              to a new level.
+            </p>
+          </div>
+          <div class="footer__container">
+            <h3 class="footer__title">SOFTWARE</h3>
+            <ul class="footer__list">
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">How to Use</a>
+              </li>
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">Tariff Plans</a>
+              </li>
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">Features</a>
+              </li>
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">Integrations</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer__resources-container">
-          <h3 class="footer__resources-title">RESOURCES</h3>
-          <ul class="footer__resources-list">
-            <li class="footer__resources-list-el">
-              <a href="" class="footer__resources-list-link">Knowledge Base</a>
-            </li>
-            <li class="footer__resources-list-el">
-              <a href="" class="footer__resources-list-link">Blog</a>
-            </li>
-          </ul>
-        </div>
+          <div class="footer__container">
+            <h3 class="footer__title">RESOURCES</h3>
+            <ul class="footer__list">
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">Knowledge Base</a>
+              </li>
+              <li class="footer__list-el">
+                <a href="" class="footer__list-link">Blog</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="footer__media">
-          <h3 class="footer__media-title">Join Our Community</h3>
-          <ul class="footer__media-list">
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-1"></use>
-              </svg>
-            </li>
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-2"></use>
-              </svg>
-            </li>
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-3"></use>
-              </svg>
-            </li>
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-4"></use>
-              </svg>
-            </li>
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-5"></use>
-              </svg>
-            </li>
-            <li class="footer__media-list-el">
-              <svg class="footer__media-svg" width="24" height="24">
-                <use href="./svg/sprite.svg#icon-media-6"></use>
-              </svg>
-            </li>
-          </ul>
-        </div>
-      </section>
+          <div class="footer__media">
+            <h3 class="footer__media-title">Join Our Community</h3>
+            <ul class="footer__media-list">
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-1.png" alt="Reddit icon" />
+                </a>
+              </li>
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-2.png" alt="socaial media icon" />
+                </a>
+              </li>
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-3.png" alt="twitter icon" />
+                </a>
+              </li>
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-4.png" alt="facebook icon" />
 
-      <section class="footer__bottom">
-        <p>&copy; 2022 Shkeeper. All rights reserved.</p>
+                </a>
+              </li>
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-5.png" alt="instagram icon" />
+                </a>
+              </li>
+              <li class="footer__media-list-el">
+                <a href="#!">
+                  <img class="footer__media-svg" src="./img/social-media-6.png" alt="youtube icon" />
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer__bottom">
+            <p>&copy; 2022 Shkeeper. All rights reserved.</p>
+          </div>
+        </div>
       </section>
     </footer>
     <script src="./js/index.js"></script>
