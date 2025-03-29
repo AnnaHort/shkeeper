@@ -101,6 +101,7 @@ body {
   color: var(--accent-text-color);
   font-size: 16px;
   line-height: 20px;
+  cursor: pointer;
   background: linear-gradient(
     90deg,
     rgba(129, 189, 255, 1) 0%,
@@ -609,6 +610,7 @@ height: 45px;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
+  cursor: pointer;
 }
 
 .faq__list-el-subtitle {
@@ -633,11 +635,10 @@ height: 45px;
   width:"12";
    height:"12";
 }
-.faq__open-acordeon-svg-minus {
+.faq__open-acordeon-svg-add-minus {
   width:"12";
   height:"12";
 }
-
 
 .faq__toggle-btn.open .faq__open-acordeon-svg-plus {
   display: none;
@@ -1320,4 +1321,36 @@ textarea.invalid {
 
 
 
+}
+/* тестування */
+.test {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.test__title{
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 60px;
+}
+.test-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.create {
+}
+
+.delete{
+
+}
+
+.test-list-el{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
 }
